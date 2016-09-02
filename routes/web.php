@@ -29,4 +29,6 @@ Route::get('/register', function(){
     return View::make('register');
 });
 
-Route::get('/databaseTest/{table}/{id}/{column}', 'DatabaseController@FetchData');
+Route::get('/database/{table}/{id}/{column}', 'DatabaseController@FetchData');
+
+

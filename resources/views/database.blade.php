@@ -37,5 +37,12 @@
 @stop
 
 @section('container')
-    <h2>{{ $stuff }}</h2>
+    <h2>Some Database stuff</h2>{{ $databaseStuff }}
+    @foreach($databaseStuff as $oneStuff)
+        <ul>
+            @foreach($oneStuff as $columnValue)
+                <li>{{ print_r($databaseStuff) }}</li>
+            @endforeach
+        </ul>
+    @endforeach
 @stop

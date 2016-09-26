@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('header')
-    <title>Database</title>
+    <title>ProjektSecondBook</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -36,25 +36,10 @@
     </style>
 @stop
 
-<!-- Fully functional iterating through whole the User model object.-->
-{{--@section('container')
-    <h2>Some Database stuff</h2>{{ count($databaseStuff) }}
-    @foreach($databaseStuff as $row)
-        <ul>
-            @foreach($row->toArray() as $columnValue => $value)
-                <li>{{ $value }}</li>
-            @endforeach
-        </ul>
-    @endforeach
-@stop--}}
-
 @section('container')
-    <h2>Some Database stuff</h2>{{ $test }}
-    @foreach($parsedUsersTable as $row)
-        <ul>
-            @foreach($row as $columnName => $value)
-                <li><strong>{{ $columnName }}</strong> -> {{ $value }}</li>
-            @endforeach
-        </ul>
-    @endforeach
+    <div class="container">
+        <div class="content">
+            <h1>{{ $userChoosedById }}</h1>
+        </div>
+    </div>
 @stop

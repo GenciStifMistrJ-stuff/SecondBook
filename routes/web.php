@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/{name}/{yearOfIssue}', function ($nameOfFramework, $yearOfIssue) {
+Route::get('/{name != database && name != user}/{yearOfIssue}', function ($nameOfFramework, $yearOfIssue) {
     return View::make('welcome')->with(
         array
         (
@@ -29,6 +29,8 @@ Route::get('/register', function(){
     return View::make('register');
 });
 
-Route::get('/database/{table}/{id}/{column}', 'DatabaseController@FetchData');
+Route::get('/database/{id}', 'DatabaseController@FetchData');
+
+Route::get('/user/{id}', 'DatabaseController@ShowConcreteUsersData');
 
 
